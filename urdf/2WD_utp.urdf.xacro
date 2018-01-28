@@ -15,9 +15,9 @@
   <link name="base_link"/>
 
   <joint name="base_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="base_link"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0 0 -0.2" rpy="0 0 0"/>
   </joint>
 
   <link name="chassis_link">
@@ -44,9 +44,9 @@
   </link>
 
   <joint name="chassis_joint" type="fixed">
-    <parent link="base_link"/>
+    <parent link="base_footprint"/>
     <child link="chassis_link"/>
-    <origin xyz="0 0 0.14" rpy="0 0 0"/>
+    <origin xyz="0.125968 0 0.14" rpy="0 0 0"/>
   </joint>
 
   <link name="left_front_wheel_link">
@@ -111,7 +111,8 @@
 
   <link name="left_rear_castor_housing_link">
     <visual>
-      <origin xyz="0.355 -0.171 0" rpy="${pi / 2} 0 ${pi / 2}"/>
+      <!--<origin xyz="-0.355 -0.171 0" rpy="${pi / 2} 0 ${pi / 2}"/>-->
+      <origin xyz="0 0 0" rpy="${pi / 2} 0 ${pi / 2}"/>
       <geometry>
         <mesh filename="package://anubis_nav/meshes/2WD_Rover/LeftRearCastorHousing.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -165,7 +166,8 @@
 
   <link name="right_rear_castor_housing_link">
     <visual>
-      <origin xyz="0.355 0.171 0" rpy="${pi / 2} 0 ${pi / 2}"/>
+      <!-- <origin xyz="0.355 0.171 0" rpy="${pi / 2} 0 ${pi / 2}"/> -->
+      <origin xyz="0 0 0" rpy="0 0 0"/> 
       <geometry>
         <mesh filename="package://anubis_nav/meshes/2WD_Rover/RightRearCastorHousing.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -225,28 +227,35 @@
     <origin xyz="-0.142 0 0.06" rpy="0 0 0"/>
   </joint>-->
 
-<link name="Realsense_SLAM_link"/>
+  <link name="front_track_cam"/>
 
-  <joint name="Realsense_SLAM_joint" type="fixed">
-    <parent link="chassis_link"/>
-    <child link="Realsense_SLAM_link"/>
-    <origin xyz="-0.110 0.0 0.358" rpy="0.0 0.0 0.0"/>
+  <joint name="front_track_cam_to_base_link" type="fixed">
+    <parent link="front_track_cam"/>
+    <child link="base_link"/>
+    <origin xyz="-0.24686 -0.0248 -0.07197" rpy="0.0 0.0 0.0"/>
   </joint>
   
-  <link name="Camera_telepre_link"/>
+ <!-- <joint name="pose_frame_to_front" type="fixed">
+    <parent link="cam_T_pose_frame"/>
+    <child link="front_track_cam"/>
+    <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+  </joint> -->
+  
 
-  <joint name="Camera_telepre_joint" type="fixed">
-    <parent link="chassis_link"/>
-    <child link="Camera_telepre_link"/>
-    <origin xyz="-0.220 0.0 1.27" rpy="0.0 0.0 0.0"/>
+  <link name="camera_link"/>
+
+  <joint name="baselink_to_camera_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0.24686 0.0 0.36697" rpy="0.0 0.0 0.0"/>
   </joint>
 
-  <link name="rplidar_SLAM_link"/>
+  <!--<link name="rplidar_SLAM_link"/>
 
   <joint name="rplidar_SLAM_joint" type="fixed">
     <parent link="chassis_link"/>
     <child link="rplidar_SLAM_link"/>
     <origin xyz="0.03 0.0 0.1618" rpy="0.0 0.0 0.0"/>
-  </joint>
+  </joint> -->
   
 </robot>
