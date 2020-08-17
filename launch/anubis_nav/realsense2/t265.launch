@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
     <!--include file="$(find realsense2_camera)/launch/rs_t265.launch"/-->
-    <node pkg="tf2_ros" type="static_transform_publisher" name="Realsense_SLAM_link_to_t265" args="0 0 0.03 0 0 0 /Realsense_SLAM_link /t265 100" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="Realsense_SLAM_link_to_t265" args="0 0 0.03 0 0 0 /Realsense_SLAM_link /t265 " />
     
 </launch>
