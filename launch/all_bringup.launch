@@ -7,7 +7,7 @@
     </node>
 
     <!---rplidar A1-->
-    <include file="$(find anubis_nav)/launch/anubis_nav/lidar.launch" />
+    <include file="$(find anubis_nav)/launch/anubis_nav/laser.launch" />
 
     <!-- t265 camera-->
     <include file="$(find anubis_nav)/launch/anubis_nav/realsense2/t265.launch" />
