@@ -4,11 +4,8 @@ and accurate tracking. The relevant APIs will be added to librealsense and
 ROS/realsense in upcoming releases. Currently, the API is available in the
 https://github.com/IntelRealSense/librealsense/blob/master/third-party/libtm/libtm/include/TrackingDevice.h#L508-L515.
 -->
-<!-- 
-https://github.com/IntelRealSense/realsense-ros 
-https://github.com/IntelRealSense/realsense-ros/issues/749
-https://github.com/IntelRealSense/realsense-ros/issues/711#issuecomment-498133068
---> 
+<!-- https://github.com/IntelRealSense/realsense-ros  https://github.com/IntelRealSense/realsense-ros/issues/711#issuecomment-498133068--> 
+<!--https://github.com/IntelRealSense/librealsense/pull/3462 odometria--> 
 <launch>
   <arg name="serial_no"           default=""/>
   <arg name="usb_port_id"         default=""/>
@@ -34,7 +31,7 @@ https://github.com/IntelRealSense/realsense-ros/issues/711#issuecomment-49813306
   <arg name="enable_sync"           default="false"/>
 
   <arg name="linear_accel_cov"      default="0.01"/>
-  <arg name="initial_reset"         default="true"/>
+  <arg name="initial_reset"         default="false"/>
   <arg name="unite_imu_method"      default=""/>
 
   <arg name="publish_odom_tf"     default="true"/>
@@ -75,9 +72,5 @@ https://github.com/IntelRealSense/realsense-ros/issues/711#issuecomment-49813306
       <arg name="publish_odom_tf"          value="$(arg publish_odom_tf)"/>
     </include>
   </group>
-  <node pkg="tf2_ros" type="static_transform_publisher" name="hola_t265" args="0 0 0 0 0 0 camera_pose_frame base_footprint " />
-  <!--node pkg="tf" type="static_transform_publisher" name="link_to_t265" args="-0.110 0 0.361 0 0 0 chassis_link camera_pose_frame 100" /-->
-  <!--node pkg="tf" type="static_transform_publisher" name="Realsense_SLAM_link_to_t265" args="0 0 0.03 0 0 0 Realsense_SLAM_link $(arg tf_prefix)_link 100" /-->
-  <node pkg="tf" type="static_transform_publisher" name="Realsense_SLAM_link_to_t265" args="0 0 0.03 0 0 0 Realsense_SLAM_link camera_link 100" />
-  
+<node pkg="tf2_ros" type="static_transform_publisher" name="hola_t265" args="0 0 0 -1.5708 0 0 camera_pose_frame chassis_link " />
 </launch>

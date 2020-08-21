@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-    <!--include file="$(find anubis_nav)/launch/anubis_nav/lidar/rplidar.launch" /-->
-    <node pkg="tf2_ros" type="static_transform_publisher" name="rplidar_SLAM_link_to_laser" args="0 0 0.05 0 0 0 /rplidar_SLAM_link /laser "/>
-
-
-</launch>

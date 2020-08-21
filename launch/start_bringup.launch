@@ -5,12 +5,13 @@
         <!--rosparam file="$(find anubis_nav)/param/ekf/robot_localization.yaml" command="load" /-->
 
     </node>
+    <include file="$(find anubis_nav)/launch/urdf_launch/2wd_utp.launch" />
 
     <!---rplidar A1-->
-    <include file="$(find anubis_nav)/launch/anubis_nav/laser.launch" />
+    <include file="$(find anubis_nav)/launch/anubis_nav/lidar/rplidar.launch" />
 
     <!-- t265 camera-->
-    <include file="$(find anubis_nav)/launch/anubis_nav/realsense2/t265.launch" />
+    <include file="$(find anubis_nav)/launch/anubis_nav/realsense2/rs_t265.launch" />
 
 
 </launch>

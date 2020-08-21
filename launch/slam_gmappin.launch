@@ -1,5 +1,6 @@
 <launch>
     <!-- Mapping package https://github.com/ros-perception/slam_gmapping/blob/melodic-devel/gmapping/launch/slam_gmapping_pr2.launch-->
+    <param name="use_sim_time" value="true"/>
     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
         <param name="base_frame" value="/base_footprint" />
         <param name="odom_frame" value="/odom" />
