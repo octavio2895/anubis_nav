@@ -2,9 +2,9 @@
 <launch>
     <!--node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
         <remap from="odometry/filtered" to="odom"/>
-        <rosparam file="$(find anubis_nav)/param/ekf/robot_localization.yaml" command="load" /-->
+        <rosparam file="$(find anubis_nav)/param/ekf/robot_localization.yaml" command="load" />
 
-    </node>
+    </node-->
     <include file="$(find anubis_nav)/launch/urdf_launch/2wd_utp.launch" />
 
     <!---rplidar A1-->
