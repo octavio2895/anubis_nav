@@ -2,8 +2,8 @@
 <launch>
 
     <!-- Map server-->
-    <arg name="map_file" default="$(find anubis_nav)/maps/map_one.yaml"/>
-    <node pkg="map_server" type="map_server" name="map_server" args="(arg map_file)"/>
+    <arg name="map_file" default="$(find anubis_nav)/maps/map.yaml"/>
+    <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)"/>
 
     <!--AMCL used for localization-->
     <include file="$(find anubis_nav)/launch/anubis_nav/amcl.launch" />

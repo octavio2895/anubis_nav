@@ -12,6 +12,8 @@ sudo apt-get install ros-melodic-robot-localization
 sudo apt-get install ros-melodic-tf2
 sudo apt-get install ros-melodic-tf2-ros
 sudo apt-get install ros-melodic-hector-slam
+sudo apt install ros-melodic-move-base
+sudo apt-get install ros-perception
 ```
 ## Lidar and realsense camera
 ```

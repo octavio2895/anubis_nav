@@ -34,7 +34,7 @@ https://github.com/IntelRealSense/realsense-ros/issues/711#issuecomment-49813306
   <arg name="enable_sync"           default="false"/>
 
   <arg name="linear_accel_cov"      default="0.01"/>
-  <arg name="initial_reset"         default="true"/>
+  <arg name="initial_reset"         default="false"/>
   <arg name="unite_imu_method"      default=""/>
 
   <arg name="publish_odom_tf"     default="true"/>
