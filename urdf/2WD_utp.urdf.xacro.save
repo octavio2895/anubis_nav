@@ -3,11 +3,9 @@
 <xacro:include filename="$(find anubis_nav)/urdf/common/common_properties.xacro"/>
 
 <!-- Parameters -->
-<xacro:property name="chasis_to_bot_x" value="-0.110" />
-<xacro:property name="chasis_to_bot_z" value="0" />
-<xacro:property name="l_bot_to_realsense" value="0.358" />
-<xacro:property name="l_bot_to_camera" value="1.27" />
-<xacro:property name="angle_bot" value="88*3.14/180" />
+<xacro:property name="chasis_to_bottom_x" value="-0.220" />
+<xacro:property name="chasis_to_bottom_z" value="0" />
+<xacro:property name="lenght_to_Realsense" value="0.358" />
 
   
   <link name="base_footprint"/>

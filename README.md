@@ -18,7 +18,7 @@ ls -l / dev | grep ttyUSB
 ## Creating a Map
 
 ```
-roslaunch anubis_nav all_bringup.launch
+roslaunch anubis_nav start_bringup.launch
 ```
 
 ```
@@ -42,7 +42,7 @@ rosrun map_server map_server map.yaml
 ## Autonomous Navigation
 
 ```
-roslaunch anubis_nav all_bringup.launch
+roslaunch anubis_nav start_bringup.launch
 ```
 
 ```
