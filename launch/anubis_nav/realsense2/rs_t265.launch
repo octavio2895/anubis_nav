@@ -75,7 +75,7 @@ https://github.com/IntelRealSense/realsense-ros/issues/711#issuecomment-49813306
       <arg name="publish_odom_tf"          value="$(arg publish_odom_tf)"/>
     </include>
   </group>
-  <node pkg="tf2_ros" type="static_transform_publisher" name="hola_t265" args="0 0 0 0 0 0 camera_pose_frame base_footprint " />
+  <node pkg="tf2_ros" type="static_transform_publisher" name="hola_t265" args="0 0 0 0 0.05 0 camera_pose_frame base_footprint " />
   <!--node pkg="tf" type="static_transform_publisher" name="link_to_t265" args="-0.110 0 0.361 0 0 0 chassis_link camera_pose_frame 100" /-->
   <!--node pkg="tf" type="static_transform_publisher" name="Realsense_SLAM_link_to_t265" args="0 0 0.03 0 0 0 Realsense_SLAM_link $(arg tf_prefix)_link 100" /-->
   <node pkg="tf" type="static_transform_publisher" name="Realsense_SLAM_link_to_t265" args="0 0 0.03 0 0 0 Realsense_SLAM_link camera_link 100" />
