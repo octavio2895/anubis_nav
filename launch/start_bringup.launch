@@ -8,10 +8,11 @@
     <include file="$(find anubis_nav)/launch/urdf_launch/2wd_utp.launch" />
 
      <!-- t265 camera-->
-    <include file="$(find anubis_nav)/launch/anubis_nav/realsense2/rs_t265.launch" />
+     <!--    <include file="$(find anubis_nav)/launch/anubis_nav/realsense2/rs_t265.launch" /> -->
 
     <!---rplidar A1-->
-    <include file="$(find anubis_nav)/launch/anubis_nav/lidar/rplidar.launch" />
+    <!-- <include file="$(find anubis_nav)/launch/anubis_nav/lidar/rplidar.launch" /> -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="hola_t265" args="0 0 0 0 0.05 0 cam_T_pose_frame base_footprint " />
 
 
 </launch>
