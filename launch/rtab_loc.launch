@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find anubis_nav)/launch/rtab_base.launch">
+        <arg name="rtabmap_args" value=""/>
+        <arg name="rviz" value="false"/>
+        <arg name="localization" value="true"/>
+    </include>
+</launch>

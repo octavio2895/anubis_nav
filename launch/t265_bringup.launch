@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find anubis_nav)/launch/anubis_nav/realsense2/rs_t265.launch">
+    <arg name="camera" value="cam_T"/>
+    <arg name="serial_no" value="925122110477"/>
+    <arg name="publish_odom_tf" value="true"/>
+    <arg name="initial_reset" value="true"/>
+    <arg name="enable_pose" value="true"/>
+    <arg name="topic_odom_in" value="/rr_openrover_driver/odom_encoder"/>
+    <arg name="calib_odom_file" value="/home/rover1/catkin_ws/src/anubis_nav/param/calibration_odometry_t265/calibration_odometry.json"/>
+  </include>
+</launch>
+
+

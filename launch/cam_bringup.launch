@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find anubis_nav)/launch/urdf_launch/2wd_utp.launch" />
+    <include file="$(find anubis_nav)/launch/t265_bringup.launch" />
+    <include file="$(find anubis_nav)/launch/d435_bringup.launch" />
+
+     <node pkg="tf2_ros" type="static_transform_publisher" name="pose_frame_to_cam" args="0 0 0 0 0 0 cam_T_pose_frame front_track_cam " />
+
+
+</launch>
