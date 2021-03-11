@@ -1,12 +1,14 @@
+<?xml version="1.0" ?>
 <launch>
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
         <rosparam file="$(find anubis_nav)/param/navigation/costmap_common_params.yaml" command="load" ns="global_costmap" />
         <rosparam file="$(find anubis_nav)/param/navigation/costmap_common_params.yaml" command="load" ns="local_costmap" />
         <rosparam file="$(find anubis_nav)/param/navigation/local_costmap_params.yaml" command="load" />
         <rosparam file="$(find anubis_nav)/param/navigation/global_costmap_params.yaml" command="load" />
-        <rosparam file="$(find anubis_nav)/param/navigation/base_local_planner_default_params.yaml" command="load" />
-	<remap from="map" to="rtabmap/proj_map"/>
+        <rosparam file="$(find anubis_nav)/param/navigation/base_local_planner_params.yaml" command="load" />
+	<remap from="map" to="rtabmap/grid_map"/>
 	<remap from="/cmd_vel" to="/cmd_vel/managed"/>
         <rosparam file="$(find anubis_nav)/param/navigation/move_base_params.yaml" command="load" />
-    </node>
+        <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /> 
+   </node>
 </launch>
